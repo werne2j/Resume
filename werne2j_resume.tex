@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.0 (5/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+\usepackage {multicol}
+
+\begin{document}
+
+\header{Jake}{Wernette}{Mobile And Web Application Developer} 
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{contact}
+10114 Falkland Avenue Apt. 206
+Raleigh NC, 27617
+(989) 506-1910
+~
+\href{mailto:werne2@gmail.com}{werne2j@gmail.com}
+\href{github.com/werne2j}{github.com/werne2j}
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2013--2014}
+{B.S in Computer Science{\normalfont}}
+{Central Michigan University}
+{\emph{Relevant Course Work}
+\begin{itemize}
+\item Object-Oriented Programming with Java.
+\item Computer Design \& Architecture.
+\end{itemize}}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{experience}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2015--Present}
+{IBM}
+{Raleigh, North Carolina}
+{\emph{Software Engineer} \\
+Responsible for developing internal web and mobile applications under the Innovation Lab}\\
+
+\entry
+{2013--2014}
+{CMU ResLife Technology Operations}
+{Mt. Pleasant, Michigan}
+{\emph{Web Application Developer} \\
+Responsible for learning and applying best practices in front-end and back-end web development.}\\
+
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{projects}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2014}
+{OneRepMax (Not In App Store)}
+{iOS - Swift}
+{A social networking app built in Swift, targeting iOS 8, for power lifters to share when they get a new personal record on a specific weight lifting movement.}\\
+
+\entry
+{2013-2014}
+{MyStatBook}
+{mystatbook.com}
+{An interactive website powered by Django Web Framework, for baseball coaches of all levels to keep track of Rosters, Schedules and Statistics.}\\
+
+\entry
+{Spring 2013}
+{BusTimes}
+{Code can be found in Github}
+{A mobile web app using jQuery Mobile and powered by Django Web Framework, that shows users what time buses will be at certain bus stops and where this bus stops are located.}
+
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	TECHNOLOGY SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Technologies}
+
+Swift, Objective-C, Python, JavaScript, AngularJS, NodeJS, HTML5, CSS3, Git/Github, Less/Sass, Grunt, Postgres, Cloudant, Redis, Django, D3, jQuery, SQL, Java
+
+\end{document}
