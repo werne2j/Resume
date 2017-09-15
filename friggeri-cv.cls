@@ -122,7 +122,7 @@
 \renewcommand{\subsection}[2]{
   \par\vspace{.5\parskip}%
   \Large\headingfont\color{headercolor} #2%
-  \par\vspace{.25\parskip}%
+  \par\vspace{.5\parskip}%
 }
 
 \pagestyle{empty}
@@ -140,7 +140,7 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
+  #1&\parbox[t]{12cm}{%
     \textbf{#2}%
     \hfill%
     {\headingfont\addfontfeature{Color=headercolor} #3}\\%
@@ -153,14 +153,14 @@
 %%%%%%%%%%%%%%
 
 \RequirePackage[absolute,overlay]{textpos}
-\setlength{\TPHorizModule}{1cm}
+\setlength{\TPHorizModule}{0.9cm}
 \setlength{\TPVertModule}{1cm}
 \newenvironment{aside}{%
   \let\oldsection\section
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.6}(1.5, 4.33)
+  \begin{textblock}{3.6}(1, 4.33)
   \begin{flushright}
   \obeycr
 }{%
@@ -174,5 +174,5 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=5cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
