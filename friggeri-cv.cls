@@ -71,16 +71,20 @@
   \color{white}%
 }
 
-\newcommand{\header}[3]{%
+\newcommand{\header}[5]{%
   \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
-    \node [anchor=center] (name) at (box) {%
+    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=5cm] (box) at (current page.north){};
+    \node [anchor=center, above=0.15cm] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
-    \node [anchor=north] at (name.south) {%
-      \fontsize{14pt}{24pt}\color{header}%
+    \node [anchor=north, below=0.15cm] (position) at (name.south) {%
+      \fontsize{18pt}{28pt}\color{header}%
       \thinfont #3%
+    };
+    \node [anchor=north, below=0.15cm] at (position.south) {%
+      \fontsize{12pt}{22pt}\color{header}%
+      {\thinfont #4}
     };
   \end{tikzpicture}
   \vspace{2.5cm}
@@ -174,5 +178,5 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=5cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=1.5cm,top=3cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
