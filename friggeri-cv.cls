@@ -83,7 +83,7 @@
       \thinfont #3%
     };
     \node [anchor=north, below=0.15cm] at (position.south) {%
-      \fontsize{12pt}{22pt}\color{header}%
+      \fontsize{14pt}{22pt}\color{header}%
       {\thinfont #4}
     };
   \end{tikzpicture}
@@ -144,7 +144,7 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{12cm}{%
+  #1&\parbox[t]{15.5cm}{%
     \textbf{#2}%
     \hfill%
     {\headingfont\addfontfeature{Color=headercolor} #3}\\%
