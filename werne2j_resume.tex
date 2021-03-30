@@ -20,14 +20,76 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+
+\usepackage[most]{tcolorbox}
 \usepackage {multicol}
+\usepackage{pgffor}
+
+\newtcbox{\badge}[1][blue]{
+  on line, 
+  arc=2pt,
+  colback=#1!50!black,
+  colframe=#1!50!black,
+  fontupper=\color{white},%,
+  boxrule=1pt, 
+  boxsep=0pt,
+  left=6pt,
+  right=6pt,
+  top=1pt,
+  bottom=2pt
+}
+
+\def\containerdata{
+{Containers},
+{Docker},
+{Kubernetes},
+{OpenShift},
+{Operators},
+{Go},
+{Cloud Native},
+{Helm},
+{GitOps},
+}
+
+\def\cddata{
+{ArgoCD},
+{Terraform},
+{Infrastructure as Code},
+{CI/CD},
+{Vault},
+{Travis CI},
+{Ansible},
+{Jenkins},
+{Git},
+{Github},
+{IBM Cloud},
+{Artifactory},
+{Python},
+{SQL},
+{NoSQL},
+{PostgreSQL},
+{CouchDB},
+{Redis}
+}
+
+\def\extradata{
+{Node JS},
+{React JS},
+{React Native},
+{Redux},
+{Jest},
+{Mocha},
+{Enzyme},
+{JavaScript},
+{HTML/CSS}
+}
 
 \begin{document}
 
 \header
-{Jake}{Wernette}
-{Full Stack and Mobile Software Engineer}
-{werne2j@gmail.com\space\space\space\space\space\space github.com/werne2j}
+{Jacob}{Wernette}
+{Site Reliability Engineer}
+{werne2j@gmail.com\space\space\space\space\space\space github.com/werne2j \space\space\space\space\space werne2j.medium.com}
 
 %----------------------------------------------------------------------------------------
 %	SIDEBAR SECTION
@@ -59,32 +121,113 @@
 \begin{entrylist}
 %------------------------------------------------
 \entry
-{2018--Present}
+{2020--Present}
+{IBM}
+{Raleigh, North Carolina}
+{\emph{Site Reliability Engineer}
+    \begin{itemize}
+        \item Initiated transformation of traditional Operations team into a Site Reliability Team
+        \item SME for CI/CD, Containerization, Cloud Native and SRE principals across organization
+        \item Architected and implemented new OpenShift cluster layout while increasing resiliency
+        \item Transitioned team from manual infrastructure to IaC with Terraform and ArgoCD
+        \item Increased observability of clusters, improved alerting and monitoring, reduced toil for engineers
+    \end{itemize}}\\
+
+\entry
+{2018--202}
 {Red Hat}
 {Raleigh, North Carolina}
-{\emph{Software Engineer - CI/CD} \\
-Responsible for automating manual build, test and release processes. Worked on a Jenkins Shared Pipeline. Built a Command Line tool using Go. }\\
+{\emph{Software Engineer - CI/CD}
+ \begin{itemize}
+        \item Automated manual build, test and release processes of productization of Open Source tools
+        \item Built test suite for Jenkins Shared Library and became a SME on the subject, giving presentations and writing four articles
+        \item Planned and Built a Command Line tool using Go to replace Jenkins Shared Library internals
+    \end{itemize}}\\
 
 \entry
 {2015--2018}
 {IBM}
 {Raleigh, North Carolina}
 {\emph{Software Engineer II (Sept 2017 - Aug 2018)} \\
-\emph{Software Engineer I (Jan 2015 - Sept 2017)} \\
-Responsible for designing, developing, testing, and supporting tools to be used in IBM's internal business from proof of concept through production.
-Built Node JS REST API from scratch. Built multiple web applications from scratch. Built multiple React JS component libraries and NPM packages.}\\
+\emph{Software Engineer I (Jan 2015 - Sept 2017)}
+\begin{itemize}
+        \item Designed, developed, tested, and supported tools used in IBM's internal business from proof of concept through production
+        \item Built Node JS REST APIs, web applications, React JS component libraries, and NPM packages
+    \end{itemize}}\\
 
 %------------------------------------------------
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	PUBLICATIONS SECTION
+%	PROJECTS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Publications}
+\section{Open Source Projects}
 
 \begin{entrylist}
 %------------------------------------------------
+\entry
+{2020--Present}
+{argocd-vault-plugin}
+{https://github.com/IBM/argocd-vault-plugin}
+{An ArgoCD plugin to retrieve secrets from Hashicorp Vault and inject them into Kubernetes secrets}\\
+
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	TECHNOLOGY SECTION
+%----------------------------------------------------------------------------------------
+\section{Technologies}
+\foreach \x in \containerdata
+{
+   \foreach \y in \x
+   {
+     \badge[lightgreen]{\y}
+   }  
+}
+\foreach \x in \cddata
+{
+   \foreach \y in \x
+   {
+     \badge[green]{\y}
+   }  
+}
+\foreach \x in \extradata
+{
+   \foreach \y in \x
+   {
+     \badge[forestgreen]{\y}
+   }  
+}
+
+
+
+%{\badge{Containers}, Docker, Kubernetes, OpenShift, Operators, Go, Cloud Native, Helm} \\
+%{ArgoCD, Terraform, Infrastructure as Code, CI/CD, Vault, Travis CI, Ansible, Jenkins} \\
+%{Git, Github, IBM Cloud, Artifactory, Jira, Python, SQL, NoSQL, PostgreSQL, CouchDB, Redis} \\
+%{Node JS, React JS, React Native, Redux, Jest, Mocha, Enzyme, JS/HTML/CSS, iOS Development (Objective-C/Swift)} \\
+
+\header
+{Jacob}{Wernette}
+{Site Reliability Engineer}
+{werne2j@gmail.com\space\space\space\space\space\space github.com/werne2j \space\space\space\space\space werne2j.medium.com}
+
+
+%----------------------------------------------------------------------------------------
+%	ARTICLES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Articles}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{02/2021}
+{Solving ArgoCD Secret Management with the argocd-vault-plugin}
+{}
+{https://itnext.io/argocd-secret-management-with-argocd-vault-plugin-539f104aff05}\\
+
 \entry
 {08/2019}
 {What Are Jenkins Shared Libraries And Why You Should Use Them}
@@ -111,15 +254,5 @@ Built Node JS REST API from scratch. Built multiple web applications from scratc
 
 %------------------------------------------------
 \end{entrylist}
-
-%----------------------------------------------------------------------------------------
-%	TECHNOLOGY SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Technologies}
-{JS/HTML/CSS, iOS Development (Objective-C/Swift), Python, Go, } \\
-{Node JS, React JS, React Native, Redux, Jest, Mocha, Enzyme} \\
-{Git, Docker, Kubernetes, Kafka, Travis CI, Jenkins, Webpack} \\
-{SQL, NoSQL, PostgreSQL, CouchDB, Redis} \\
 
 \end{document}

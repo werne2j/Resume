@@ -19,13 +19,15 @@
 
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
-\definecolor{lightgray}{HTML}{999999}
+\definecolor{lightgray}{HTML}{e6e6e6}
 
-\definecolor{green}{HTML}{C2E15F}
-\definecolor{orange}{HTML}{FDA333}
-\definecolor{purple}{HTML}{D3A4F9}
+\definecolor{forestgreen}{HTML}{009933}
+\definecolor{lightgreen}{HTML}{00ff55}
+\definecolor{green}{HTML}{00cc44}
+\definecolor{orange}{HTML}{fc8c03}
+\definecolor{purple}{HTML}{c587f7}
 \definecolor{red}{HTML}{FB4485}
-\definecolor{blue}{HTML}{6CE0F1}
+\definecolor{blue}{HTML}{0099ff}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -55,7 +57,7 @@
 \newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
+\setmainfont[Mapping=tex-text]{Helvetica Neue Light}
 
 %\setmathfont{XITS Math}
 
@@ -105,7 +107,7 @@
         blue\or%
         red\or%
         orange\or%
-        green\or%
+        forestgreen\or%
         purple\or%
         brown\else%
         headercolor\fi%
