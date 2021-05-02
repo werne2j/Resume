@@ -22,12 +22,12 @@
 \definecolor{lightgray}{HTML}{e6e6e6}
 
 \definecolor{forestgreen}{HTML}{009933}
-\definecolor{lightgreen}{HTML}{00ff55}
+\definecolor{lightgreen}{HTML}{00FF55}
 \definecolor{green}{HTML}{00cc44}
-\definecolor{orange}{HTML}{fc8c03}
-\definecolor{purple}{HTML}{c587f7}
+\definecolor{orange}{HTML}{Fc8c03}
+\definecolor{purple}{HTML}{c587F7}
 \definecolor{red}{HTML}{FB4485}
-\definecolor{blue}{HTML}{0099ff}
+\definecolor{blue}{HTML}{0099FF}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
